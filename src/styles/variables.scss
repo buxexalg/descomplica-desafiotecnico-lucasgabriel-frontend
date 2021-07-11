@@ -3,3 +3,11 @@ $secondary-color: rgb(254, 213, 0);
 $hover-color: rgb(250, 240, 96);
 $dark-color: rgb(0, 0, 0);
 
+@keyframes fadeInAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
