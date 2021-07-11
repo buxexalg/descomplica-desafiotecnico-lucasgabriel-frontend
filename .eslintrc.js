@@ -16,8 +16,9 @@ module.exports = {
 		},
 		ecmaVersion: 12,
 		sourceType: 'module',
+		project: './tsconfig.json',
 	},
-	plugins: ['react', 'prettier'],
+	plugins: ['react', 'prettier', '@typescript-eslint'],
 	rules: {
 		'prettier/prettier': [
 			'error',
