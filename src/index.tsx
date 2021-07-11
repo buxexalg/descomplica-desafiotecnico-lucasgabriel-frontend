@@ -2,10 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import Homepage from './pages/homepage/Homepage';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+const client = new ApolloClient({
+	uri: 'http://localhost:4000/graphql',
+	cache: new InMemoryCache(),
+});
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Homepage />
+		<ApolloProvider client={client}>
+			<Homepage />
+		</ApolloProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
