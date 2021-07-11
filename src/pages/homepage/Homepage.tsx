@@ -2,18 +2,19 @@ import React from 'react';
 import './styles.scss';
 import { useForm } from 'react-hook-form';
 import logo from '../../assets/logos/logo.svg';
+import { GetStudent } from '../../components/GetStudents/GetStudent';
+import SearchButton from '../../components/SearchButton/SearchButton';
 
 type StudentData = {
 	dadosDoAluno: string;
 };
 
 function Homepage() {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm<StudentData>();
-	const onSubmit = handleSubmit((data) => console.log(data, errors));
+	const { register, handleSubmit } = useForm<StudentData>();
+
+	const onSubmit = handleSubmit((data) => setFormData(data));
+
+	const [formData, setFormData] = React.useState<StudentData>();
 
 	return (
 		<section className="homepage">
@@ -32,11 +33,11 @@ function Homepage() {
 						/>
 					</div>
 
-					<button className="searchStudentButton" type="submit">
-						Consultar
-					</button>
+					<SearchButton />
 				</form>
 			</section>
+
+			{formData && <GetStudent formData={formData} />}
 		</section>
 	);
 }
