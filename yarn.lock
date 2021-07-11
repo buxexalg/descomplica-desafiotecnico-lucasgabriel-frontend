@@ -4523,6 +4523,11 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+email-validator@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/email-validator/-/email-validator-2.0.4.tgz#b8dfaa5d0dae28f1b03c95881d904d4e40bfe7ed"
+  integrity sha512-gYCwo7kh5S3IDyZPLZf6hSS0MnZT8QmJFqYvbqlDZSbwdZlY6QZWxJ4i/6UhITOJ4XzyI647Bm2MXKCLqnJ4nQ==
+
 emittery@^0.7.1:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz#25595908e13af0f5674ab419396e2fb394cdfa82"
@@ -12081,6 +12086,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+validator-brazil@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/validator-brazil/-/validator-brazil-1.2.2.tgz#19f88b4606c5ff0da9372950d70f2f3692997c3b"
+  integrity sha512-AsquEjcOQxol7IWshCaqzvOEEsdDE9gANueXQbtWUUaozAxZN4tYnL0vreMsuApK/IvltMP2T09VQpVgaV1QYw==
 
 vary@~1.1.2:
   version "1.1.2"
