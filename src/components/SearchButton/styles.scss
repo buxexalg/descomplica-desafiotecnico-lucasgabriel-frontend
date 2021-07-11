@@ -12,6 +12,10 @@
 	transition: 0.3s;
 	font-family: 'Montserrat', sans-serif;
 
+	@media (max-width: 768px) {
+		height: 20%;
+	}
+
 	&:hover {
 		background-color: $hover-color;
 	}

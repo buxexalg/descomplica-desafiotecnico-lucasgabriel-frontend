@@ -7,10 +7,26 @@
 	border-radius: 12px;
 	padding: 0;
 
+	@media (max-width: 768px) {
+		height: 2rem;
+		font-size: 14px;
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+	
+	}
+
 	.left {
 		text-align: left;
 		padding-left: 1.5rem;
 		font-weight: 500;
+
+		@media (max-width: 768px) {
+			padding-left: 0.5rem;
+		}
 	}
 
 	.center {
@@ -23,5 +39,9 @@
 		width: 40%;
 		padding-right: 1.5rem;
 		font-weight: 500;
+
+		@media (max-width: 768px) {
+			padding-left: 0.5rem;
+		}
 	}
 }
