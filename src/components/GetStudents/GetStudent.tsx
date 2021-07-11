@@ -17,19 +17,27 @@ const checkIfNameCpfOrEmail = (value: string) => {
 	}
 };
 
-export function GetStudent(props: any) {
-	type Student = {
-		name: string;
-		cpf: string;
-		email: string;
-	};
+interface formData {
+	formData: dadosDoAluno;
+}
 
+interface dadosDoAluno {
+	dadosDoAluno: string;
+}
+
+type Student = {
+	name: string;
+	cpf: string;
+	email: string;
+};
+
+export function GetStudent(props: formData) {
 	const [student, setStudent] = React.useState<Student[]>([]);
 	const [localError, setError] = React.useState<boolean>(false);
 
 	const variable = checkIfNameCpfOrEmail(props.formData.dadosDoAluno);
 
-	const variableGQL: any = {
+	const variableGQL: Student = {
 		email: '',
 		cpf: '',
 		name: '',

@@ -1,7 +1,18 @@
 import React from 'react';
 import './styles.scss';
 
-function StudentRow(props: any) {
+interface studentRow {
+	key: number;
+	item: Item;
+}
+
+interface Item {
+	name: string;
+	cpf: string;
+	email: string;
+}
+
+function StudentRow(props: studentRow) {
 	return (
 		<tr className="studentRow" key={props.key}>
 			<td className="left">{props.item.name}</td>
