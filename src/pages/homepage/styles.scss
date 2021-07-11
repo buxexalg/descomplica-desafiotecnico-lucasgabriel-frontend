@@ -21,9 +21,10 @@
 		align-items: center;
 		padding: 0 4rem;
 		margin-top: 4rem;
+		animation: fadeInAnimation 0.5s;
 
 		.studentForm {
-			height: 100%;
+			height: 70%;
 			width: 100%;
 			display: flex;
 			align-items: center;
@@ -39,6 +40,7 @@
 					margin-bottom: 1rem;
 					font-size: 16px;
 					padding: 0 1rem;
+					font-weight: 500;
 				}
 
 				input {
@@ -46,27 +48,22 @@
 					font-size: 16px;
 					border-radius: 8px;
 					border: 1px solid $dark-color;
+					font-family: 'Montserrat', sans-serif;
+
+					&::placeholder {
+						font-family: 'Montserrat', sans-serif;
+					}
 
 					&:active {
-						border: 1px solid $dark-color;
+						outline: none;
+						border-radius: 8px;
+					}
+
+					&:focus {
+						outline: none;
+						border-radius: 8px;
 					}
 				}
-			}
-		}
-
-		.searchStudentButton {
-			background-color: $secondary-color;
-			font-weight: bold;
-			border-radius: 28px;
-			border: none;
-			height: 50%;
-			padding: 0 2rem;
-			font-size: 18px;
-			cursor: pointer;
-			transition: 0.3s;
-
-			&:hover {
-				background-color: $hover-color;
 			}
 		}
 	}
